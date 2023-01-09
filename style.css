@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #131415;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.menu-container {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+
+.menu-toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: transform 1.5s;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid #232423;
+    box-shadow: 2px 2px 2px 2px rgba(0 0 0 / 50%), -2px -2px 1px rgba(100 100 100 / 20%),
+        inset 2px 2px 2px 2px rgba(0 0 0 /50%), inset -2px -2px 2px 1px rgba(100 100 100 / 20%);
+    background-color: #131415;
+}
+
+.menu-container li a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    border: 2px solid #232423;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px 2px rgba(0 0 0 / 50%), -2px -2px 1px rgba(100 100 100 / 20%),
+        inset 1px 1px 2px 2px rgba(0 0 0 /50%), inset -2px -2px 2px 1px rgba(100 100 100 / 20%)
+}
+
+.menu-container li {
+    list-style: none;
+    position: absolute;
+    transition: 0.8s;
+    transform-origin: 150px;
+    left: 0;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(120px);
+}
+
+.menu-container.active .menu-toggle {
+    transform: rotate(315deg);
+}
+
+.menu-container.active li {
+    transform: rotate(calc(360deg/10 * var(--i)));
+}
+
+.menu-container.active li:nth-of-type(2) a i {
+    transform: rotate(324deg);
+}
+
+.menu-container.active li:nth-of-type(3) a i {
+    transform: rotate(-71deg);
+}
+
+.menu-container.active li:nth-of-type(4) a i {
+    transform: rotate(260deg);
+}
+
+.menu-container.active li:nth-of-type(5) a i {
+    transform: rotate(-144deg);
+}
+
+.menu-container.active li:nth-of-type(6) a i {
+    transform: rotate(180deg);
+}
+
+.menu-container.active li:nth-of-type(7) a i {
+    transform: rotate(144deg);
+}
+
+.menu-container.active li:nth-of-type(8) a i {
+    transform: rotate(120deg);
+}
+
+.menu-container.active li:nth-of-type(9) a i {
+    transform: rotate(72deg);
+}
+
+.menu-container.active li:nth-of-type(10) a i {
+    transform: rotate(36deg);
+}
+
+.menu-container li:nth-of-type(1) a:hover,
+.menu-container li:nth-of-type(2) a:hover,
+.menu-container li:nth-of-type(3) a:hover,
+.menu-container li:nth-of-type(4) a:hover,
+.menu-container li:nth-of-type(5) a:hover,
+.menu-container li:nth-of-type(6) a:hover,
+.menu-container li:nth-of-type(7) a:hover,
+.menu-container li:nth-of-type(8) a:hover,
+.menu-container li:nth-of-type(9) a:hover,
+.menu-container li:nth-of-type(10) a:hover {
+    text-shadow: none;
+}
+
+.menu-container li:nth-of-type(1) a{
+    text-shadow: 0 0 25px #ff00ad,
+        0 0 30px #ff00ad,
+        0 0 35px #ff00ad,
+        0 0 40px #ff00ad,
+        0 0 45px #ff00ad;
+}
+
+.menu-container li:nth-of-type(2) a {
+    text-shadow: 0 0 25px #fbca07,
+        0 0 30px #fbca07,
+        0 0 35px #fbca07,
+        0 0 40px #fbca07,
+        0 0 45px #fbca07;
+}
+
+.menu-container li:nth-of-type(3) a {
+    text-shadow: 0 0 25px #4285f4,
+        0 0 30px #bb001b,
+        0 0 35px #ea4335,
+        0 0 40px #fbbc05,
+        0 0 45px #34a853;
+}
+
+.menu-container li:nth-of-type(4) a {
+    text-shadow: 0 0 25px #00ff62,
+        0 0 30px #00ff00,
+        0 0 35px #00ff00,
+        0 0 40px #00ff00,
+        0 0 45px #00ff00;
+}
+
+.menu-container li:nth-of-type(5) a {
+    text-shadow: 0 0 25px #0077b5,
+        0 0 30px #0077b5,
+        0 0 35px #0077b5,
+        0 0 40px #0077b5,
+        0 0 45px #0077b5;
+}
+
+.menu-container li:nth-of-type(6) a {
+    text-shadow: 0 0 25px #000,
+        0 0 30px #000,
+        0 0 35px #000,
+        0 0 40px #000,
+        0 0 45px #000;
+}
+
+.menu-container li:nth-of-type(7) a {
+    text-shadow: 0 0 25px #1778f2,
+        0 0 30px #1778f2,
+        0 0 35px #1778f2,
+        0 0 40px #1778f2,
+        0 0 45px #1778f2;
+}
+
+.menu-container li:nth-of-type(8) a {
+    text-shadow: 0 0 25px #08a0e9,
+        0 0 30px #08a0e9,
+        0 0 35px #08a0e9,
+        0 0 40px #08a0e9,
+        0 0 45px #08a0e9;
+}
+
+.menu-container li:nth-of-type(9) a {
+    text-shadow: 0 0 25px #515bd4,
+        0 0 30px #8134af,
+        0 0 35px #dd2a7b,
+        0 0 40px #feda77,
+        0 0 45px #f58529;
+}
+
+.menu-container li:nth-of-type(10) a {
+    text-shadow: 0 0 25px #fff,
+        0 0 30px #fff,
+        0 0 35px #fff,
+        0 0 40px #fff,
+        0 0 45px #fff;
+}
+
+.menu-container li a:hover {
+    text-shadow: transparent !important;
+}
